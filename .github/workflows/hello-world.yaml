@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        uses: actions/checkout@v2
+      - run: ci/build-app.sh
+      - name: test-step
+        run: ci/unit-test-app.sh
