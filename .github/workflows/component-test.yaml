@@ -9,6 +9,7 @@ jobs:
     runs-on: self-hosted
     container: gradle:6-jdk11
     steps:
+    - run: whoami
     - uses: actions/checkout@v2
     - name: Upload Repo
       uses: actions/upload-artifact@v2
